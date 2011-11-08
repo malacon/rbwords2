@@ -1,0 +1,2 @@
+[2011-11-08 10:53:01] request.ERROR: Symfony\Component\HttpKernel\Exception\NotFoundHttpException: No route found for "GET /" (uncaught exception) at /var/www/rbwords2/vendor/symfony/src/Symfony/Bundle/FrameworkBundle/EventListener/RouterListener.php line 84 [] []
+[2011-11-08 10:53:03] request.ERROR: Symfony\Component\HttpKernel\Exception\NotFoundHttpException: No route found for "GET /" (uncaught exception) at /var/www/rbwords2/app/cache/prod/classes.php line 4543 [] []

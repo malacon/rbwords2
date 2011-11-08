@@ -1,0 +1,7 @@
+parameters:
+#    mere_faith_rb_words.example.class: MereFaith\RBWordsBundle\Example
+
+services:
+#    mere_faith_rb_words.example:
+#        class: %mere_faith_rb_words.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
