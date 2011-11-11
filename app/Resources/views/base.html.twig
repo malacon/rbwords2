@@ -45,18 +45,9 @@
 
   <div id="container">
     <header id="header">
-      {% block navigation %}
-        <nav>
-          <ul class="navigation">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      {% endblock %}
       <hgroup>
         <h2>{% block blog_title %}<a href="#">RBWords</a>{% endblock %}</h2>
-        <h3>{% block blog_tagline %}<a href="#">Preaching's finest...</a>{% endblock %}</h3>
+        <h3 class="hidden">{% block blog_tagline %}<a href="#">Preaching's finest...</a>{% endblock %}</h3>
       </hgroup>
     </header>
     <section id="main">

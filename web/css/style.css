@@ -210,15 +210,17 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
    Author: Craig Baker
    ========================================================================== */
-
+body {background: url(/img/background.gif) repeat;}
 #container { margin: 0 auto; width: 804px;}
 header#header {background: url(/img/title2.jpg) no-repeat; height:145px; width:804px;}
+  header#header h2 {position:relative;padding:50px 0 0 270px;width: 100px;height:30px;margin:0;-webkit-transform: rotate(2deg);-moz-transform: rotate(2deg); 
+  }
 aside {background: url(/img/nav.jpg) no-repeat; height: 590px; width: 224px; float: left;}
 section#main {float: right; background:url(/img/paper2.jpg) top right repeat-y; width: 533px;
 min-height: 650px;
 margin-right: 7px;
 padding: 20px;}
-footer {height:34px;width:584px;background:url(/images/footer.jpg) no-repeat;}
+footer {height:34px;width:584px;background:url(/img/footer.jpg) no-repeat; float:right; padding-top:30px;text-align:center;}
 
 
 

@@ -27,15 +27,15 @@
     <parameter key="database_driver">pdo_mysql</parameter>
     <parameter key="database_host">localhost</parameter>
     <parameter key="database_port"></parameter>
-    <parameter key="database_name">symfony</parameter>
-    <parameter key="database_user">root</parameter>
-    <parameter key="database_password"></parameter>
+    <parameter key="database_name">rbwords2</parameter>
+    <parameter key="database_user">rbwords2</parameter>
+    <parameter key="database_password">rbwords2</parameter>
     <parameter key="mailer_transport">smtp</parameter>
     <parameter key="mailer_host">localhost</parameter>
     <parameter key="mailer_user"></parameter>
     <parameter key="mailer_password"></parameter>
     <parameter key="locale">en</parameter>
-    <parameter key="secret">ThisTokenIsNotSoSecretChangeIt</parameter>
+    <parameter key="secret">I5oncewentT2otheSeminaryfor3Training4</parameter>
     <parameter key="router_listener.class">Symfony\Bundle\FrameworkBundle\EventListener\RouterListener</parameter>
     <parameter key="controller_resolver.class">Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver</parameter>
     <parameter key="controller_name_converter.class">Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser</parameter>
@@ -53,7 +53,7 @@
     <parameter key="translation.loader.xliff.class">Symfony\Component\Translation\Loader\XliffFileLoader</parameter>
     <parameter key="debug.event_dispatcher.class">Symfony\Bundle\FrameworkBundle\Debug\TraceableEventDispatcher</parameter>
     <parameter key="debug.container.dump">/var/www/rbwords2/app/cache/dev/appDevDebugProjectContainer.xml</parameter>
-    <parameter key="kernel.secret">ThisTokenIsNotSoSecretChangeIt</parameter>
+    <parameter key="kernel.secret">I5oncewentT2otheSeminaryfor3Training4</parameter>
     <parameter key="kernel.trust_proxy_headers">false</parameter>
     <parameter key="session.class">Symfony\Component\HttpFoundation\Session</parameter>
     <parameter key="session.storage.native.class">Symfony\Component\HttpFoundation\SessionStorage\NativeSessionStorage</parameter>
@@ -843,7 +843,7 @@
     </service>
     <service id="form.csrf_provider" class="Symfony\Component\Form\Extension\Csrf\CsrfProvider\SessionCsrfProvider">
       <argument type="service" id="session"/>
-      <argument>ThisTokenIsNotSoSecretChangeIt</argument>
+      <argument>I5oncewentT2otheSeminaryfor3Training4</argument>
     </service>
     <service id="form.type.csrf" class="Symfony\Component\Form\Extension\Csrf\Type\CsrfType">
       <tag name="form.type" alias="csrf"/>
@@ -1535,11 +1535,11 @@
     </service>
     <service id="doctrine.dbal.default_connection" class="stdClass" factory-method="createConnection" factory-service="doctrine.dbal.connection_factory">
       <argument type="collection">
-        <argument key="dbname">symfony</argument>
+        <argument key="dbname">rbwords2</argument>
         <argument key="host">localhost</argument>
         <argument key="port"></argument>
-        <argument key="user">root</argument>
-        <argument key="password"></argument>
+        <argument key="user">rbwords2</argument>
+        <argument key="password">rbwords2</argument>
         <argument key="driver">pdo_mysql</argument>
         <argument key="driverOptions" type="collection"/>
       </argument>
@@ -1585,7 +1585,9 @@
       <argument type="service">
         <service class="Doctrine\ORM\Configuration" public="false">
           <call method="setEntityNamespaces">
-            <argument type="collection"/>
+            <argument type="collection">
+              <argument key="MereFaithRBWordsBundle">MereFaith\RBWordsBundle\Entity</argument>
+            </argument>
           </call>
           <call method="setMetadataCacheImpl">
             <argument type="service">
@@ -1616,7 +1618,23 @@
           </call>
           <call method="setMetadataDriverImpl">
             <argument type="service">
-              <service class="Doctrine\ORM\Mapping\Driver\DriverChain" public="false"/>
+              <service class="Doctrine\ORM\Mapping\Driver\DriverChain" public="false">
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                      <argument type="service">
+                        <service class="Symfony\Bridge\Doctrine\Annotations\IndexedReader" public="false">
+                          <argument type="service" id="annotation_reader"/>
+                        </service>
+                      </argument>
+                      <argument type="collection">
+                        <argument>/var/www/rbwords2/src/MereFaith/RBWordsBundle/Entity</argument>
+                      </argument>
+                    </service>
+                  </argument>
+                  <argument>MereFaith\RBWordsBundle\Entity</argument>
+                </call>
+              </service>
             </argument>
           </call>
           <call method="setProxyDir">
