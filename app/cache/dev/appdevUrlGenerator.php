@@ -24,6 +24,13 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        '_configurator_step' => true,
        '_configurator_final' => true,
        'MereFaithRBWordsBundle_homepage' => true,
+       'MereFaithRBWordsBundle_preacher' => true,
+       'MereFaithRBWordsBundle_retreats' => true,
+       'MereFaithRBWordsBundle_contact' => true,
+       'MereFaithRBWordsBundle_wttw' => true,
+       'MereFaithRBWordsBundle_lectionary' => true,
+       'MereFaithRBWordsBundle_rbwords' => true,
+       'MereFaithRBWordsBundle_reflections' => true,
     );
 
     /**
@@ -100,5 +107,40 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
     private function getMereFaithRBWordsBundle_homepageRouteInfo()
     {
         return array(array (), array (  '_controller' => 'MereFaith\\RBWordsBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/',  ),));
+    }
+
+    private function getMereFaithRBWordsBundle_preacherRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'MereFaith\\RBWordsBundle\\Controller\\DefaultController::preacherAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/preacher',  ),));
+    }
+
+    private function getMereFaithRBWordsBundle_retreatsRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'MereFaith\\RBWordsBundle\\Controller\\DefaultController::retreatsAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/retreats',  ),));
+    }
+
+    private function getMereFaithRBWordsBundle_contactRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'MereFaith\\RBWordsBundle\\Controller\\DefaultController::contactAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/contact',  ),));
+    }
+
+    private function getMereFaithRBWordsBundle_wttwRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'MereFaith\\RBWordsBundle\\Controller\\WTTWController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/wttw',  ),));
+    }
+
+    private function getMereFaithRBWordsBundle_lectionaryRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'MereFaith\\RBWordsBundle\\Controller\\WTTWController::lectionaryAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/wttw/lectionary',  ),));
+    }
+
+    private function getMereFaithRBWordsBundle_rbwordsRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'MereFaith\\RBWordsBundle\\Controller\\RBWordsController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/rbwords',  ),));
+    }
+
+    private function getMereFaithRBWordsBundle_reflectionsRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'MereFaith\\RBWordsBundle\\Controller\\ReflectionsController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/reflections',  ),));
     }
 }

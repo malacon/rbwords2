@@ -38,7 +38,7 @@
   <!-- All JavaScript at the bottom, except for Modernizr / Respond.
        Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
        For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+  <script src="{{ asset('js/libs/modernizr-2.0.6.min.js') }}"></script>
 </head>
 
 <body>
@@ -46,7 +46,7 @@
   <div id="container">
     <header id="header">
       <hgroup>
-        <h2>{% block blog_title %}<a href="#">RBWords</a>{% endblock %}</h2>
+        <h2>{% block blog_title %}<a href="{{ path('MereFaithRBWordsBundle_homepage') }}">RBWords</a>{% endblock %}</h2>
         <h3 class="hidden">{% block blog_tagline %}<a href="#">Preaching's finest...</a>{% endblock %}</h3>
       </hgroup>
     </header>
@@ -55,7 +55,22 @@
     {% endblock %}
     </section>
     <aside class="sidebar">
-      {% block sidebar %}{% endblock %}
+      {% block sidebar %}
+        <nav>
+          <h3>Praedicator</h3>
+          <ul class="navigation">
+            <li><a href="{{ path('MereFaithRBWordsBundle_preacher') }}">The Preacher</a></li>
+            <li><a href="{{ path('MereFaithRBWordsBundle_retreats') }}">Retreats</a></li>
+            <li><a href="{{ path('MereFaithRBWordsBundle_contact') }}">Contact</a></li>
+          </ul>
+          <h3>Verba</h3>
+          <ul class="navigation">          
+            <li><a href="{{ path('MereFaithRBWordsBundle_wttw') }}">Word to the Wise</a></li>
+            <li><a href="{{ path('MereFaithRBWordsBundle_rbwords') }}">RBWords</a></li>
+            <li><a href="{{ path('MereFaithRBWordsBundle_reflections') }}">Reflections</a></li>
+          </ul>
+        </nav>
+      {% endblock %}
     </aside>
     <footer id="footer">
       {% block footer %}
@@ -75,7 +90,7 @@
 
     <!-- scripts concatenated and minified via ant build script-->
     <script defer src="{{ asset('js/plugins.js') }}"></script>
-    <script defer src="{{ asset('js/script.js') }}"></script>
+    <script defer src="{{ asset('js/scripts.js') }}"></script>
     <!-- end scripts-->
     <!-- Change UA-XXXXX-X to be your site's ID -->
     <script>

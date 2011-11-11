@@ -92,6 +92,41 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'MereFaith\\RBWordsBundle\\Controller\\DefaultController::indexAction',  '_route' => 'MereFaithRBWordsBundle_homepage',);
         }
 
+        // MereFaithRBWordsBundle_preacher
+        if ($pathinfo === '/preacher') {
+            return array (  '_controller' => 'MereFaith\\RBWordsBundle\\Controller\\DefaultController::preacherAction',  '_route' => 'MereFaithRBWordsBundle_preacher',);
+        }
+
+        // MereFaithRBWordsBundle_retreats
+        if ($pathinfo === '/retreats') {
+            return array (  '_controller' => 'MereFaith\\RBWordsBundle\\Controller\\DefaultController::retreatsAction',  '_route' => 'MereFaithRBWordsBundle_retreats',);
+        }
+
+        // MereFaithRBWordsBundle_contact
+        if ($pathinfo === '/contact') {
+            return array (  '_controller' => 'MereFaith\\RBWordsBundle\\Controller\\DefaultController::contactAction',  '_route' => 'MereFaithRBWordsBundle_contact',);
+        }
+
+        // MereFaithRBWordsBundle_wttw
+        if ($pathinfo === '/wttw') {
+            return array (  '_controller' => 'MereFaith\\RBWordsBundle\\Controller\\WTTWController::indexAction',  '_route' => 'MereFaithRBWordsBundle_wttw',);
+        }
+
+        // MereFaithRBWordsBundle_lectionary
+        if ($pathinfo === '/wttw/lectionary') {
+            return array (  '_controller' => 'MereFaith\\RBWordsBundle\\Controller\\WTTWController::lectionaryAction',  '_route' => 'MereFaithRBWordsBundle_lectionary',);
+        }
+
+        // MereFaithRBWordsBundle_rbwords
+        if ($pathinfo === '/rbwords') {
+            return array (  '_controller' => 'MereFaith\\RBWordsBundle\\Controller\\RBWordsController::indexAction',  '_route' => 'MereFaithRBWordsBundle_rbwords',);
+        }
+
+        // MereFaithRBWordsBundle_reflections
+        if ($pathinfo === '/reflections') {
+            return array (  '_controller' => 'MereFaith\\RBWordsBundle\\Controller\\ReflectionsController::indexAction',  '_route' => 'MereFaithRBWordsBundle_reflections',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

@@ -1,3 +1,31 @@
 MereFaithRBWordsBundle_homepage:
     pattern:  /
     defaults: { _controller: MereFaithRBWordsBundle:Default:index }
+
+MereFaithRBWordsBundle_preacher:
+    pattern:  /preacher
+    defaults: { _controller: MereFaithRBWordsBundle:Default:preacher }
+
+MereFaithRBWordsBundle_retreats:
+    pattern:  /retreats
+    defaults: { _controller: MereFaithRBWordsBundle:Default:retreats }
+
+MereFaithRBWordsBundle_contact:
+    pattern:  /contact
+    defaults: { _controller: MereFaithRBWordsBundle:Default:contact }
+
+MereFaithRBWordsBundle_wttw:
+    pattern:  /wttw
+    defaults: { _controller: MereFaithRBWordsBundle:WTTW:index }
+
+MereFaithRBWordsBundle_lectionary:
+    pattern:  /wttw/lectionary
+    defaults: { _controller: MereFaithRBWordsBundle:WTTW:lectionary }
+
+MereFaithRBWordsBundle_rbwords:
+    pattern:  /rbwords
+    defaults: { _controller: MereFaithRBWordsBundle:RBWords:index }
+
+MereFaithRBWordsBundle_reflections:
+    pattern:  /reflections
+    defaults: { _controller: MereFaithRBWordsBundle:Reflections:index }

@@ -210,23 +210,33 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
    Author: Craig Baker
    ========================================================================== */
+@font-face { font-family: 'JournalRegular'; src: url('fonts/journal-webfont.eot'); src: local('?'), url('fonts/journal-webfont.woff') format('woff'), url('fonts/journal-webfont.ttf') format('truetype'), url('fonts/journal-webfont.svg#webfont3lGqYzYA') format('svg'); font-weight: normal; font-style: normal; }
+
 body {background: url(/img/background.gif) repeat;}
+
 #container { margin: 0 auto; width: 804px;}
+
 header#header {background: url(/img/title2.jpg) no-repeat; height:145px; width:804px;}
   header#header h2 {position:relative;padding:50px 0 0 270px;width: 100px;height:30px;margin:0;-webkit-transform: rotate(2deg);-moz-transform: rotate(2deg); 
   }
+
 aside {background: url(/img/nav.jpg) no-repeat; height: 590px; width: 224px; float: left;}
-section#main {float: right; background:url(/img/paper2.jpg) top right repeat-y; width: 533px;
-min-height: 650px;
-margin-right: 7px;
-padding: 20px;}
+  ul.navigation {padding-left:30px;font: 120% Georgia, Palatino, Times, 'Times New Roman', serif;}
+  ul.navigation li {list-style-image: url(/img/shield-bullet.gif);}
+
+section#main {float: right; background:url(/img/paper2.jpg) top right repeat-y; width: 533px; min-height: 650px; margin-right: 7px; padding: 20px; }
+
 footer {height:34px;width:584px;background:url(/img/footer.jpg) no-repeat; float:right; padding-top:30px;text-align:center;}
 
 
 
+h1, h2, h3, h4, h5 {font: 32px/36px 'JournalRegular', Georgia, serif; letter-spacing: 1px; font-weight: 700; color: black;padding:0; margin:0;}
 
-
-
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
 
 
 
